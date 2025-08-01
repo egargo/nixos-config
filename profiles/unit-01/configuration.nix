@@ -15,6 +15,7 @@
     ../../system/hardware/intel.nix
     ../../system/hardware/keyd.nix
     ../../system/hardware/printing.nix
+    ../../system/hardware/tlp.nix
     ../../system/security/gpg.nix
   ];
 
