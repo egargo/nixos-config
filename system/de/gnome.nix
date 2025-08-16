@@ -33,6 +33,7 @@
       gnome-music
       gnome-photos
       gnome-software
+      gnome-system-monitor
       gnome-tour
       gnome-weather
       seahorse
