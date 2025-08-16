@@ -61,5 +61,5 @@ configurations are managed with home-manager and nixos, respectively.
 ```bash
 nh os switch -u .
 nh home switch .
-nh os clean all
+nh clean all
 ```

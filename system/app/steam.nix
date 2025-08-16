@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ me, pkgs, ... }:
 
 {
   programs.steam = {
@@ -7,7 +7,7 @@
   };
 
   environment = {
-    systemPackages = with pgks; [
+    systemPackages = with pkgs; [
       protonup
     ];
 
