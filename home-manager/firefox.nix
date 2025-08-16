@@ -28,6 +28,8 @@
         };
         settings = {
           "browser.cache.disk.enable" = false;
+          "browser.ml.enable" = false;
+          "browser.ml.chat.enabled" = false;
           "browser.profiles.enabled" = true;
           "browser.tabs.closeWindowWithLastTab" = true;
           "browser.tabs.warnOnClose" = true;
