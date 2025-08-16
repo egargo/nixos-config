@@ -3,8 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     home-manager
-    brave
     ghostty
+    nvtopPackages.intel
   ];
 
   services.xserver.excludePackages = with pkgs; [
