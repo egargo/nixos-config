@@ -7,6 +7,7 @@
     gcc
     gnumake
     go
+    kotlin
     lua
     nodejs
     python313
