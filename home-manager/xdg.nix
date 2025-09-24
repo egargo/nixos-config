@@ -38,7 +38,7 @@
       "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
       "image/png" = [ "org.gnome.Loupe.desktop" ];
 
-      "text/html" = [ "org.gnome.TextEditor.desktop" ];
+      "text/*" = [ "org.gnome.TextEditor.desktop" ];
 
       "x-scheme-handler/about" = [ "brave-browser.desktop" ];
       "x-scheme-handler/chrome" = [ "firefox.desktop" ];
