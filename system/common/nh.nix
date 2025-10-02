@@ -3,7 +3,7 @@
     enable = true;
     clean = {
       enable = true;
-      extraArgs = "--keep-since 1d --keep 1";
+      extraArgs = "--keep-since 7d --keep 3";
     };
   };
 }
