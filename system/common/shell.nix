@@ -9,6 +9,7 @@
     enableCompletion = true;
     syntaxHighlighting.enable = true;
     shellAliases = {
+      lg = "lazygit";
       open = "xdg-open";
     };
     ohMyZsh = {

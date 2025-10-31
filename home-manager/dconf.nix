@@ -201,8 +201,8 @@
       power-saver-profile-on-low-battery = true;
       sleep-inactive-ac-type = "suspend";
       sleep-inactive-battery-type = "suspend";
-      sleep-inactive-ac-timeout = 60;
-      sleep-inactive-battery-timeout = 60;
+      sleep-inactive-ac-timeout = 900;
+      sleep-inactive-battery-timeout = 900;
 
     };
 
