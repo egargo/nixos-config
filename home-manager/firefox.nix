@@ -12,46 +12,47 @@
           force = true;
           packages = with inputs.firefox-addons.packages.${me.system}; [
             bitwarden
+            darkreader
             ublock-origin
           ];
-          settings = {
-            "uBlock0@raymondhill.net".settings = {
-              selectedFilterLists = [
-                "ublock-filters"
-                "ublock-badware"
-                "ublock-privacy"
-                "ublock-quick-fixes"
-                "ublock-unbreak"
-                "ublock-experimental"
-                "easylist"
-                "easylist-chat"
-                "easylist-newsletters"
-                "easylist-notifications"
-                "easylist-annoyances"
-                "adguard-generic"
-                "adguard-mobile"
-                "adguard-mobile-app-banners"
-                "adguard-other-annoyances"
-                "adguard-popup-overlays"
-                "adguard-widgets"
-                "easyprivacy"
-                "adguard-spyware-url"
-                "block-lan"
-                "urlhaus-1"
-                "curben-phishing"
-                "plowe-0"
-                "dpollock-0"
-                "fanboy-cookiemonster"
-                "ublock-cookies-easylist"
-                "adguard-cookies"
-                "ublock-cookies-adguard"
-                "fanboy-social"
-                "adguard-social"
-                "fanboy-thirdparty_social"
-                "ublock-annoyances"
-              ];
-            };
-          };
+          # settings = {
+          #   "uBlock0@raymondhill.net".settings = {
+          #     selectedFilterLists = [
+          #       "ublock-filters"
+          #       "ublock-badware"
+          #       "ublock-privacy"
+          #       "ublock-quick-fixes"
+          #       "ublock-unbreak"
+          #       "ublock-experimental"
+          #       "easylist"
+          #       "easylist-chat"
+          #       "easylist-newsletters"
+          #       "easylist-notifications"
+          #       "easylist-annoyances"
+          #       "adguard-generic"
+          #       "adguard-mobile"
+          #       "adguard-mobile-app-banners"
+          #       "adguard-other-annoyances"
+          #       "adguard-popup-overlays"
+          #       "adguard-widgets"
+          #       "easyprivacy"
+          #       "adguard-spyware-url"
+          #       "block-lan"
+          #       "urlhaus-1"
+          #       "curben-phishing"
+          #       "plowe-0"
+          #       "dpollock-0"
+          #       "fanboy-cookiemonster"
+          #       "ublock-cookies-easylist"
+          #       "adguard-cookies"
+          #       "ublock-cookies-adguard"
+          #       "fanboy-social"
+          #       "adguard-social"
+          #       "fanboy-thirdparty_social"
+          #       "ublock-annoyances"
+          #     ];
+          #   };
+          # };
         };
         settings = {
           "browser.cache.disk.enable" = false;
