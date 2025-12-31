@@ -102,6 +102,18 @@ return {
 						completion = {
 							callSnippet = "Replace",
 						},
+						diagnostics = {
+							globals = {
+								"vim",
+								"require",
+							},
+						},
+						runtime = {
+							version = "LuaJIT",
+						},
+						telemetry = {
+							enable = false,
+						},
 					},
 				},
 			},
