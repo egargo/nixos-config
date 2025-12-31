@@ -6,7 +6,7 @@ vim.g.editorconfig = true
 vim.g.virtcolumn_char = "▕"
 vim.g.virtcolumn_priority = 10
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "99"
 vim.opt.autoindent = false
 vim.opt.smartindent = true
 vim.opt.tabstop = 4
