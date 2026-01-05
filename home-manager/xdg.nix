@@ -1,4 +1,14 @@
 {
+  xdg.desktopEntries = {
+    "nvim" = {
+      name = "nvim";
+      noDisplay = true;
+    };
+    "nvtop" = {
+      name = "nvtop";
+      noDisplay = true;
+    };
+  };
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
