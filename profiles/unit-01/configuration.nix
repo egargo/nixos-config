@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../system/app/direnv.nix
     ../../system/app/docker.nix
     ../../system/app/git.nix
     ../../system/app/nvim.nix
