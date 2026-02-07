@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   nix = {
     # gc = {
@@ -14,5 +16,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      libgcc
+    ];
+  };
 }
