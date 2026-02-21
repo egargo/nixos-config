@@ -3,20 +3,21 @@
 {
   home.packages = with pkgs; [
     # Development
-    cargo rustc
+    # cargo rustc
     dbeaver-bin
-    gcc
-    gnumake
-    go
-    kotlin
-    lua
-    nodejs
-    python313
+    # gcc
+    # gnumake
+    # go
+    # kotlin
+    # lua
+    # nodejs
+    # python313
     postman
 
     # Desktop
+    anydesk
     gimp3
-    kdePackages.kdenlive
+    # kdePackages.kdenlive
     libreoffice-fresh
     ytmdl
   ];
