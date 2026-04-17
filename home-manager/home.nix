@@ -8,6 +8,7 @@
     ./ghostty.nix
     ./gtk.nix
     ./packages.nix
+    ./vscode.nix
     ./xdg.nix
   ];
 
