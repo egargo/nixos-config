@@ -3,16 +3,6 @@ local language_servers = {
 	'pyright',
 }
 
-vim.pack.add({
-	{ src = 'https://github.com/neovim/nvim-lspconfig' },
-	{ src = 'https://github.com/williamboman/mason.nvim' },
-	{ src = 'https://github.com/williamboman/mason-lspconfig.nvim' },
-	{
-		src = 'https://github.com/saghen/blink.cmp',
-		version = vim.version.range('1.*')
-	},
-})
-
 vim.api.nvim_create_autocmd('LspAttach', {
 	group = vim.api.nvim_create_augroup('my.lsp', {}),
 	callback = function(ev)

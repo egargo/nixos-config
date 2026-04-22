@@ -2,6 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('options')
+require('plugins.packages')
 require('plugins.blankline')
 require('plugins.comment')
 require('plugins.git')

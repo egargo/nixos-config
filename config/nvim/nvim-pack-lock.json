@@ -1,11 +1,7 @@
 {
   "plugins": {
-    "Comment.nvim": {
-      "rev": "e30b7f2008e52442154b66f7c519bfd2f1e32acb",
-      "src": "https://github.com/numToStr/Comment.nvim"
-    },
     "blink.cmp": {
-      "rev": "90d14caca4ae557665ab105080c27d5f289a2e30",
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
@@ -30,8 +26,12 @@
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason.nvim": {
-      "rev": "8fdc4b0a563768c04476042b9cc765c149560bbe",
+      "rev": "12ddd182d9efbdc848b540f16484a583d52da0fb",
       "src": "https://github.com/williamboman/mason.nvim"
+    },
+    "mini.comment": {
+      "rev": "8e5ff3ed3cc0e8f216617aae01020c00c20f7a87",
+      "src": "https://github.com/nvim-mini/mini.comment"
     },
     "nvim-lspconfig": {
       "rev": "e146efacbafed3789ac568abcc5a981c5decaa58",
@@ -50,7 +50,7 @@
       "src": "https://github.com/nvim-telescope/telescope-ui-select.nvim"
     },
     "telescope.nvim": {
-      "rev": "028d9a0695a0cc4cfa893889f8c408ed7ccc8adc",
+      "rev": "506338434fec5ad19cb1f8d45bf92d66c4917393",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     }
   }
