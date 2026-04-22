@@ -28,7 +28,7 @@
         "zsh-interactive-cd"
         "zsh-navigation-tools"
       ];
-      theme = "robbyrussell";
+      theme = "sunaku";
     };
   };
 
