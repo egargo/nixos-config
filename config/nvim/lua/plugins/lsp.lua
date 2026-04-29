@@ -1,6 +1,9 @@
 local language_servers = {
 	'lua_ls',
+	'gopls',
 	'pyright',
+	'yamlls',
+	'terraformls',
 }
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -73,10 +76,10 @@ require('blink.cmp').setup({
 		implementation = 'lua',
 	},
 	keymap = {
-		preset = 'default',
+		preset = 'enter',
 		['<Tab>'] = { 'select_next', 'fallback', },
 		['<S-Tab>'] = { 'select_prev', 'fallback' },
-		['<CR>'] = { 'accept', 'fallback' },
+		['<CR>'] = { 'select_and_accept', 'fallback' },
 	},
 	appearance = {
 		nerd_font_variant = 'mono',

@@ -1,4 +1,19 @@
 require('telescope').setup({
+	defaults = {
+		file_ignore_patterns = {
+			'.git',
+			'node_modules',
+			'.venv',
+			'venv',
+			'__pycache__',
+		},
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
+			no_ignore = true,
+		},
+	},
 	extensions = {
 		['ui-select'] = {
 			require('telescope.themes').get_dropdown(),
