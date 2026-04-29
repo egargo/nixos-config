@@ -14,7 +14,7 @@ EOF
 }
 
 live_install() {
-	nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disko/btrfs.nix
+	nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disko/ext4.nix
 	nixos-generate-config --root /mnt
 	cp -rv . /mnt/etc/nixos
 	mv -v /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/profiles/unit-01/hardware-configuration.nix
