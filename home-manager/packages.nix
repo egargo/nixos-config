@@ -19,6 +19,6 @@
     gimp3
     # kdePackages.kdenlive
     libreoffice-fresh
-    ytmdl
+    # ytmdl
   ];
 }

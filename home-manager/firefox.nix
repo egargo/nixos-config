@@ -1,8 +1,9 @@
-{ me, inputs, ...}:
+{ me, config, inputs, ...}:
 
 {
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
     languagePacks = [ "en-US" ];
     profiles = {
       bee = {

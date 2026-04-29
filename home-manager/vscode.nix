@@ -8,7 +8,6 @@
       ms-python.python
       ms-python.isort
       ms-python.black-formatter
-      vscodevim.vim
     ];
   };
 }
