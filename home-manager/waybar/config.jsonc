@@ -1,0 +1,76 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "height": 48,
+    "spacing": 0,
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "backlight",
+        "battery",
+        "custom/power"
+    ],
+    "niri/workspaces": {
+        "format": "{value}"
+    },
+    "clock": {
+        "timezone": "Asia/Manila",
+        "format": "<b>{:%b %d %H:%M}</b>"
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [ "", "", "", "", "", "", "", "", "" ]
+    },
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰃨",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [ "", "", "", "", "" ]
+    },
+    "network": {
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "format-linked": "{ifname} (No IP) 󰊗",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "interval": 1,
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "󰅶 {icon} {format_source}",
+        "format-muted": "󰅶 {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [ "", "", "" ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+    "format" : "⏻ ",
+    "tooltip": false,
+    "on-click": "wlogout"
+    }
+}

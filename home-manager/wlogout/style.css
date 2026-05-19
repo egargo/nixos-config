@@ -1,0 +1,38 @@
+* {
+    background-image: none;
+}
+
+window {
+    background-color: rgba(12, 12, 12, 0.9);
+}
+
+button {
+    background-color: #171717;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #fafafa;
+    color: #fafafa;
+}
+
+button:focus, button:active, button:hover {
+    background-color: #0a0a0a;
+    outline-style: none;
+}
+
+#lock {
+}
+
+#logout {
+}
+
+#suspend {
+}
+
+#hibernate {
+}
+
+#shutdown {
+}
+
+#reboot {
+}
