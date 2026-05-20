@@ -9,13 +9,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, noctalia, ... }@inputs:
     let
       me = import ./me.nix;
       pkgs = import nixpkgs {
@@ -35,6 +40,7 @@
         inherit pkgs;
         extraSpecialArgs = { inherit inputs me; };
         modules = [
+            inputs.noctalia.homeModules.default
           ./home-manager/home.nix
         ];
       };

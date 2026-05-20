@@ -10,7 +10,7 @@
     ../../system/app/tmux.nix
     ../../system/app/virtualization.nix
     ../../system/common
-    ../../system/de/gnome.nix
+    ../../system/de/niri.nix
     ../../system/hardware/audio.nix
     ../../system/hardware/battery.nix
     ../../system/hardware/bluetooth.nix

@@ -7,6 +7,8 @@
     ./firefox.nix
     ./ghostty.nix
     ./gtk.nix
+    ./niri.nix
+    ./noctalia.nix
     ./packages.nix
     ./vscode.nix
     ./xdg.nix
