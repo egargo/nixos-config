@@ -24,5 +24,5 @@
     };
   };
 
-  programs.lazygit.enable = true;
+  programs.lazygit.enable = false;
 }
