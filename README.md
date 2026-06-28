@@ -14,15 +14,17 @@ NixOS environment.
 I am not an expert in Nix or NixOS, as I've only been using NixOS since 23.11,
 so there are plenty of improvements that can be made.
 
+I've tried numerous DEs and WMs but I personally think that GNOME is the best.
 
-## Units
 
-| Unit    | Device                  |
-|---------|-------------------------|
-| unit-00 | Asus TUF Gaming FX505DT |
-| unit-01 | Acer Swift SF14-51      |
-| unit-03 | Work Machine            |
-| unit-04 | Virtual Machine         |
+## Hosts
+
+| Host     | Device                    |
+|----------|---------------------------|
+| trajan   | Old Personal/Work Machine |
+| augustus | Personal Machine          |
+| caligula | Virtual Machine           |
+| nero     | Work Machine              |
 
 
 ## Installation setup
@@ -36,7 +38,7 @@ of commands and wait for my system to finish installing.
 ```bash
 git clone https://github.com/egargo/nixos-config
 cd nixos-config
-./install.sh live-install
+./install.sh live-install <host> # augustus, caligula, nero, trajan
 poweroff
 ```
 
