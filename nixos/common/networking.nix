@@ -5,22 +5,40 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  networking.networkmanager.enable = true;
+  networking = {
+    dhcpcd.enable = false;
+    nameservers = [
+      "8.8.8.8"
+      "8.8.4.4"
+      "2001:4860:4860::8888"
+      "2001:4860:4860::8844"
+    ];
+    networkmanager = {
+      enable = true;
+      dns = "systemd-resolved";
+    };
+    useDHCP = false;
+  };
 
   time.timeZone = "Asia/Manila";
 
-  # services.resolved = {
-  #   enable = true;
-  #   dnssec = "true";
-  #   domains = [ "~." ];
-  #   fallbackDns = [
-  #     "1.1.1.3#one.one.one.one"
-  #     "1.0.0.3#one.one.one.one"
-  #     "2606:4700:4700::1113#one.one.one.one"
-  #     "2606:4700:4700::1003#one.one.one.one"
-  #   ];
-  #   dnsovertls = "true";
-  # };
+  services.resolved = {
+    enable = true;
+    settings = {
+      Resolve = {
+        DNS = [
+          "8.8.8.8"
+          "8.8.4.4"
+          "2001:4860:4860::8888"
+          "2001:4860:4860::8844"
+        ];
+        DNSSEC = "true";
+        DNSOverTLS = "true";
+        Domains = [ "~." ];
+        FallbackDns = [ ];
+      };
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
