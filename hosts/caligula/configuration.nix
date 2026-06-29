@@ -7,7 +7,7 @@
     ../../nixos/app/git.nix
     ../../nixos/app/tmux.nix
     ../../nixos/common
-    ../../nixos/de/gnome.nix
+    ../../nixos/de/xfce.nix
     ../../nixos/hardware/audio.nix
     ../../nixos/security/gpg.nix
     ../../nixos/security/rtkit.nix
