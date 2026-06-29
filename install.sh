@@ -4,31 +4,32 @@
 set -e
 
 COMMAND="$1"
+PROFILE="$2"
 
 _help() {
 cat <<EOF
 Usage: $0 <COMMAND>
-	live-install	Install NixOS from live ISO
-	post-install	Post install configuration
+	live-install <PROFILE>	Install NixOS from live ISO
+	post-install		Post install configuration
 EOF
 }
 
 live_install() {
-	nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount ./disko/btrfs.nix
+	nix --experimental-features "nix-command flakes" run github:nix-community/disko/latest -- --mode destroy,format,mount "./hosts/$PROFILE/disko.nix"
 	nixos-generate-config --root /mnt
 	cp -rv . /mnt/etc/nixos
-	mv -v /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/profiles/unit-01/hardware-configuration.nix
+	mv -v /mnt/etc/nixos/hardware-configuration.nix "/mnt/etc/nixos/hosts/$PROFILE/hardware-configuration.nix"
 	rm -v /mnt/etc/nixos/configuration.nix
-	nixos-install --flake /mnt/etc/nixos#bee
+	nixos-install --flake "/mnt/etc/nixos#$PROFILE"
 	nixos-enter --root /mnt -c 'passwd clint'
 }
 
 post_install() {
-	cp -v /etc/nixos/profiles/unit-01/hardware-configuration.nix ./profiles/unit-01/hardware-configuration.nix
+	current_host=$(cat /etc/hostname)
+	cp -v "/etc/nixos/hosts/$current_host/hardware-configuration.nix" "./hosts/$current_host/hardware-configuration.nix"
 	git remote -v set-url origin git@github.com:egargo/nixos-config.git
-	ln -vs "$PWD/config/nvim" ~/.config
-	mkdir -v ~/.ssh
-	ln -vs "$PWD/config/ssh/config" ~/.ssh/config
+	ln -vs "$PWD/nvim" ~/.config
+	ln -vs "$PWD/ssh/config" ~/.ssh/config
 	rm -vrf ~/.config/ghostty
 }
 

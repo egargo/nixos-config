@@ -15,27 +15,47 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
-      me = import ./me.nix;
       pkgs = import nixpkgs {
-        system = me.system;
-        legacyPackages = nixpkgs.legacyPackages.${me.system};
+        system = "x86_64-linux";
+        legacyPackages = nixpkgs.legacyPackages."x86_64-linux";
         config.allowUnfree = true;
       };
-    in {
-      nixosConfigurations.${me.hostName} = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs me; };
+    in
+    {
+      nixosConfigurations."augustus" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
-          ./profiles/${me.profile}/configuration.nix
+          ./hosts/augustus/configuration.nix
         ];
       };
 
-      homeConfigurations.${me.user.userName} = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit inputs me; };
+      nixosConfigurations."nero" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
-          ./home-manager/home.nix
+          ./hosts/nero/configuration.nix
+        ];
+      };
+
+      nixosConfigurations."caligula" = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/caligula/configuration.nix
+        ];
+      };
+
+      homeConfigurations."clint" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = { inherit inputs; };
+        modules = [
+          ./home/home.nix
         ];
       };
     };
