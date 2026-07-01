@@ -4,7 +4,8 @@
   home.packages = with pkgs; [
     # Development
     # cargo rustc
-    # dbeaver-bin
+    dbeaver-bin
+    insomnia
     # gcc
     # gnumake
     # go
