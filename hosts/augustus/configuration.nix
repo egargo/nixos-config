@@ -6,6 +6,7 @@
     ../../nixos/app/direnv.nix
     ../../nixos/app/docker.nix
     ../../nixos/app/git.nix
+    ../../nixos/app/steam.nix
     ../../nixos/app/tmux.nix
     ../../nixos/app/virtualization.nix
     ../../nixos/common
