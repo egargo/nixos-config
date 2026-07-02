@@ -16,6 +16,7 @@
     ../../nixos/hardware/bluetooth.nix
     ../../nixos/hardware/intel.nix
     ../../nixos/hardware/keyd.nix
+    ../../nixos/hardware/laptop.nix
     ../../nixos/hardware/printing.nix
     ../../nixos/security/gpg.nix
     ../../nixos/security/rtkit.nix
