@@ -4,6 +4,7 @@ local language_servers = {
 	'nil_ls',
 	'pyright',
 	'sqlls',
+	'terraformls',
 	'ts_ls',
 	'yamlls',
 	'zls',

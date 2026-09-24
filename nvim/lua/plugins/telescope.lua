@@ -1,18 +1,19 @@
 require('telescope').setup({
 	defaults = {
 		file_ignore_patterns = {
-			'%.git/',
+			'%.devenv/',
 			'%.direnv/',
+			'%.git/',
 			'%.venv/',
-			'node_modules',
-			'venv',
-			'__pycache__',
+			'node_modules/',
+			'venv/',
+			'__pycache__/',
 		},
 	},
 	pickers = {
 		find_files = {
 			hidden = true,
-			no_ignore = true,
+			no_ignore = false,
 		},
 	},
 	extensions = {
