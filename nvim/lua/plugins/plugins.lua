@@ -15,7 +15,6 @@ vim.pack.add({
 	{ src = 'https://github.com/nvim-mini/mini.comment' },
 	{ src = 'https://github.com/nvim-lualine/lualine.nvim' },
 	{ src = 'https://github.com/stevearc/oil.nvim' },
-	{ src = 'https://github.com/rebelot/kanagawa.nvim' },
-	{ src = 'https://github.com/nvim-orgmode/orgmode' },
+	{ src = 'https://github.com/morhetz/gruvbox' },
 	{ src = 'https://github.com/kdheepak/lazygit.nvim' },
 })
