@@ -2,24 +2,11 @@
 
 {
   home.packages = with pkgs; [
-    # Development
-    # cargo rustc
+    anydesk
     dbeaver-bin
-    insomnia
-    # gcc
-    # gnumake
-    # go
-    # kotlin
-    # lua
-    # nodejs
-    # python313
-    # postman
-
-    # Desktop
-    # anydesk
     gimp3
-    # kdePackages.kdenlive
-    libreoffice-fresh
-    # ytmdl
+    inkscape
+    shotcut
+    libreoffice
   ];
 }

@@ -23,6 +23,7 @@
   environment = {
     gnome.excludePackages = with pkgs; [
       epiphany
+      evolution
       geary
       gnome-connections
       gnome-contacts
@@ -31,7 +32,6 @@
       gnome-logs
       gnome-maps
       gnome-music
-      gnome-photos
       gnome-software
       gnome-tour
       gnome-weather

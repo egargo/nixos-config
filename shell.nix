@@ -8,6 +8,7 @@
 
 pkgs.mkShellNoCC {
   nativeBuildInputs = with pkgs; [
+    nil
     nixfmt
   ];
 }

@@ -8,6 +8,7 @@
         "docker"
         "jackaudio"
         "networkmanager"
+        "render"
         "video"
         "wheel"
       ];

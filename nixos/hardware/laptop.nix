@@ -7,4 +7,6 @@
     KillUserProcesses = false;
     LidSwitchIgnoreInhibited = "no";
   };
+
+  services.fstrim.enable = true;
 }
